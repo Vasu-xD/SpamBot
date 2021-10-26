@@ -42,7 +42,7 @@ APP_ID = os.environ.get("APP_ID", default=None)
 API_HASH = os.environ.get("API_HASH", default=None)
 BOT_TOKEN = os.environ.get("BOT_TOKEN", default=None)
 EVENT_LOGS = os.environ.get("EVENT_LOGS", default=None)
-OWNER_USERNAME = os.environ.get("OWNER_USERNAME", default=VasuXD")
+OWNER_USERNAME = os.environ.get("OWNER_USERNAME", default="VasuXD")
 OWNER = os.environ.get("OWNER", default="VasuXD")
 
 
