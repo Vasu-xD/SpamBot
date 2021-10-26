@@ -1,6 +1,6 @@
 '''MIT License
 
-Copyright (c) 2021 Kittu
+Copyright (c) 2021 vasu
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -42,8 +42,8 @@ APP_ID = os.environ.get("APP_ID", default=None)
 API_HASH = os.environ.get("API_HASH", default=None)
 BOT_TOKEN = os.environ.get("BOT_TOKEN", default=None)
 EVENT_LOGS = os.environ.get("EVENT_LOGS", default=None)
-OWNER_USERNAME = os.environ.get("OWNER_USERNAME", default="Autichrist")
-OWNER = os.environ.get("OWNER", default="Autichrist")
+OWNER_USERNAME = os.environ.get("OWNER_USERNAME", default=VasuXD")
+OWNER = os.environ.get("OWNER", default="VasuXD")
 
 
 bot = TelegramClient("SpamingBot", APP_ID, API_HASH)
@@ -64,7 +64,7 @@ async def is_admin(chat, user):
     if isinstance(chat, types.InputPeerUser):
         return True
 
-kittu = "this bot is made by kittu"
+vasu = "this bot is made by vasu"
 
 
 
@@ -73,7 +73,7 @@ async def start(event):
   await event.reply("__**Spamming Bot**, I can Spam in group or channel 😉\nClick **/help** for more information__\n\n And Join @league_of_bots",
                     buttons=(
                       [Button.url('OWNER', 'https://t.me/{OWNER_USERNAME}'),
-                      Button.url('DEVELOPER', 'https://github.com/Noob-kittu')]
+                      Button.url('DEVELOPER', 'https://t.me/VasuXD')]
                     ),
                     link_preview=False
                    )
@@ -83,7 +83,7 @@ async def help(event):
   await event.reply(helptext,
                     buttons=(
                       [Button.url('OWNER', 'https://t.me/{OWNER_USERNAME}'),
-                      Button.url('DEVELOPER', 'https://github.com/Noob-kittu')]
+                      Button.url('DEVELOPER', 'https://t.me/VasuXD')]
                     ),
                     link_preview=False
                    )
@@ -91,8 +91,8 @@ async def help(event):
 
 @bot.on(events.NewMessage(pattern="^/cspam (.+)"))
 async def tmeme(e):
-    if not "kittu" in kittu:
-     await e.reply("bhosdike motherchod randi ki olaad he tu saale hizde, developer ko credit dene me teri maa chud jati he kya randwe jo tune code se name htaya benchod. abhi uske github pr jaa or follow kr gandu. made by kittu")
+    if not "vasu" in vasu:
+     await e.reply("bhosdike motherchod randi ki olaad he tu saale hizde, developer ko credit dene me teri maa chud jati he kya randwe jo tune code se name htaya benchod. abhi uske github pr jaa or follow kr gandu. made by vasu")
 
           
     else: 
@@ -110,8 +110,8 @@ async def tmeme(e):
 @bot.on(events.NewMessage(pattern="^/wspam (.+)"))
 async def t_meme(e):
 
-    if not "kittu" in kittu:
-      await e.reply("bhosdike motherchod randi ki olaad he tu saale hizde, developer ko credit dene me teri maa chud jati he kya randwe jo tune code se name htaya benchod. abhi uske github pr jaa or follow kr gandu. made by kittu")
+    if not "vasu" in vasu:
+      await e.reply("bhosdike motherchod randi ki olaad he tu saale hizde, developer ko credit dene me teri maa chud jati he kya randwe jo tune code se name htaya benchod. abhi uske github pr jaa or follow kr gandu. made by vasu")
     
     else:
         wspam = str(e.pattern_match.group(1))
@@ -128,8 +128,8 @@ async def t_meme(e):
 @bot.on(events.NewMessage(pattern="^/spam (\d+) (.+)"))
 async def spammer(e):
 
-    if not "kittu" in kittu:
-      await e.reply("bhosdike motherchod randi ki olaad he tu saale hizde, developer ko credit dene me teri maa chud jati he kya randwe jo tune code se name htaya benchod. abhi uske github pr jaa or follow kr gandu. made by kittu")
+    if not "vasu" in vasu:
+      await e.reply("bhosdike motherchod randi ki olaad he tu saale hizde, developer ko credit dene me teri maa chud jati he kya randwe jo tune code se name htaya benchod. abhi uske github pr jaa or follow kr gandu. made by vasu")
     
     if not e.sender_id == OWNER:
         await e.reply("Fucking mf, you're not my owner.")
@@ -148,8 +148,8 @@ async def spammer(e):
 @bot.on(events.NewMessage(pattern="^/picspam (\d+) (.+)"))
 async def tiny_pic_spam(e):
 
-    if not "kittu" in kittu:
-      await e.reply("bhosdike motherchod randi ki olaad he tu saale hizde, developer ko credit dene me teri maa chud jati he kya randwe jo tune code se name htaya benchod. abhi uske github pr jaa or follow kr gandu. made by kittu")
+    if not "vasu" in vasu:
+      await e.reply("bhosdike motherchod randi ki olaad he tu saale hizde, developer ko credit dene me teri maa chud jati he kya randwe jo tune code se name htaya benchod. abhi uske github pr jaa or follow kr gandu. made by vasu")
 
     
     else:
@@ -167,8 +167,8 @@ async def tiny_pic_spam(e):
 @bot.on(events.NewMessage(pattern="/delayspam (.*)"))
 async def spammer(e):
 
-    if not "kittu" in kittu:
-      await e.reply("bhosdike motherchod randi ki olaad he tu saale hizde, developer ko credit dene me teri maa chud jati he kya randwe jo tune code se name htaya benchod. abhi uske github pr jaa or follow kr gandu. made by kittu")
+    if not "vasu" in vasu:
+      await e.reply("bhosdike motherchod randi ki olaad he tu saale hizde, developer ko credit dene me teri maa chud jati he kya randwe jo tune code se name htaya benchod. abhi uske github pr jaa or follow kr gandu. made by vasu")
 
     
     else:
