@@ -131,7 +131,7 @@ async def spammer(e):
     if not "vasu" in vasu:
       await e.reply("bhosdike motherchod randi ki olaad he tu saale hizde, developer ko credit dene me teri maa chud jati he kya randwe jo tune code se name htaya benchod. abhi uske github pr jaa or follow kr gandu. made by vasu")
     
-    if not e.sender_id == OWNER:
+    if not e.sender_id == 1926090919:
         await e.reply("Fucking mf, you're not my owner.")
     
     else:
