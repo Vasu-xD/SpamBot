@@ -50,34 +50,18 @@ bot = TelegramClient("SpamingBot", APP_ID, API_HASH)
 run = bot.start(bot_token=BOT_TOKEN) 
 
 
-
-
+async def is_admin(chat, user):
+    if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):
+        return isinstance(
+            (
+                await bot(functions.channels.GetParticipantRequest(chat, user))
+            ).participant,
+            (types.ChannelParticipantAdmin, types.ChannelParticipantCreator),
+        )
+    if isinstance(chat, types.InputPeerUser):
+        return True
 
 vasu = "this bot is made by vasu"
-
-
-
-
-
-@bot.on(events.NewMessage(pattern="^/start$"))
-async def start(event):
-  await event.reply("__**👋🏻 Hello!**, How's Uh?😉__",
-                    buttons=(
-                      [Button.url('BOT', 'https://t.me/vasurobot'),
-                      Button.url('CREATOR', 'https://t.me/VasuXD')]
-                    ),
-                    link_preview=False
-                   )
-@bot.on(events.NewMessage(pattern="^/help$"))
-async def help(event):
-  helptext = "**Hey! Are you looking for help?\Contact Me By Buttons Below**"
-  await event.reply(helptext,
-                    buttons=(
-                      [Button.url('BOT', 'https://t.me/vasurobot'),
-                      Button.url('CREATOR', 'https://t.me/VasuXD')]
-                    ),
-                    link_preview=False
-                   )
 
 
 @bot.on(events.NewMessage(pattern="^/cspam (.+)"))
