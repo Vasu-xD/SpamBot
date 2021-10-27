@@ -53,18 +53,7 @@ run = bot.start(bot_token=BOT_TOKEN)
 
 
 
-async def is_admin(chat, user):
-    if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):
-        return isinstance(
-            (
-                await bot(functions.channels.GetParticipantRequest(chat, user))
-            ).participant,
-            (types.ChannelParticipantAdmin, types.ChannelParticipantCreator),
-        )
-    if isinstance(chat, types.InputPeerUser):
-        return True
 
-vasu = "this bot is made by vasu"
 
 
 
