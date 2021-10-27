@@ -70,20 +70,20 @@ vasu = "this bot is made by vasu"
 
 @bot.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("__**Spamming Bot**, I can Spam in group or channel 😉\nClick **/help** for more information__\n\n And Join @league_of_bots",
+  await event.reply("__**👋🏻 Hello!**, How's Uh?😉__",
                     buttons=(
-                      [Button.url('OWNER', 'https://t.me/{OWNER_USERNAME}'),
-                      Button.url('DEVELOPER', 'https://t.me/VasuXD')]
+                      [Button.url('BOT', 'https://t.me/vasurobot'),
+                      Button.url('CREATOR', 'https://t.me/VasuXD')]
                     ),
                     link_preview=False
                    )
 @bot.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "**Help Menu of SPAMBOT**\n\nCommand: /spam\n__You can use this command with text what you want to Spam .__\n`Example: /spam 10 Good Morning!`\n*More Commands* - \n /delayspam \n /wspam \n /picspam."
+  helptext = "**Hey! Are you looking for help?\Contact Me By Buttons Below**"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('OWNER', 'https://t.me/{OWNER_USERNAME}'),
-                      Button.url('DEVELOPER', 'https://t.me/VasuXD')]
+                      [Button.url('BOT', 'https://t.me/vasurobot'),
+                      Button.url('CREATOR', 'https://t.me/VasuXD')]
                     ),
                     link_preview=False
                    )
@@ -101,10 +101,7 @@ async def tmeme(e):
          await e.delete()
          for letter in message:
              await e.respond(letter)
-         if EVENT_LOGS:
-             await e.reply(
-                  "#CSPAM\n" "TSpam was executed successfully"
-             )
+
 
 
 @bot.on(events.NewMessage(pattern="^/wspam (.+)"))
@@ -119,10 +116,7 @@ async def t_meme(e):
         await e.delete()
         for word in message:
             await e.respond(word)
-        if EVENT_LOGS:
-            await e.reply(
-                 "#WSPAM\n" "WSpam was executed successfully"
-            )
+ 
 
 
 @bot.on(events.NewMessage(pattern="^/spam (\d+) (.+)"))
@@ -139,10 +133,7 @@ async def spammer(e):
         spam_message = str(e.pattern_match.group(2))
         await e.delete()
         await asyncio.wait([e.respond(spam_message) for i in range(counter)])
-        if EVENT_LOGS:
-            await e.reply(
-                 "#SPAM\n" "Spam was executed successfully"
-            )
+
 
 
 @bot.on(events.NewMessage(pattern="^/picspam (\d+) (.+)"))
@@ -158,10 +149,7 @@ async def tiny_pic_spam(e):
         await e.delete()
         for _ in range(1, counter):
             await e.client.send_file(e.chat_id, link)
-        if EVENT_LOGS:
-            await e.reply(
-                 "#PICSPAM\n" "PicSpam was executed successfully"
-            )
+
 
 
 @bot.on(events.NewMessage(pattern="/delayspam (.*)"))
@@ -179,10 +167,8 @@ async def spammer(e):
         for _ in range(1, counter):
             await e.respond(spam_message)
             await sleep(spamDelay)
-        if EVENT_LOGS:
-            await e.reply(
-                 "#DelaySPAM\n" "DelaySpam was executed successfully"
-            )
+
+
 
 
 
