@@ -68,7 +68,7 @@ vasu = "this bot is made by vasu"
 async def start(event):
   await event.reply("__**👋🏻 Hello!**, How's Uh?😉__",
                     buttons=(
-                      [Button.url('MAIN PBOT', 'https://t.me/vasurobot'),
+                      [Button.url('MAIN BOT', 'https://t.me/vasurobot'),
                       Button.url('CREATOR', 'https://t.me/VasuXD')]
                     ),
                     link_preview=False
