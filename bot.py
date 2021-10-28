@@ -64,17 +64,6 @@ async def is_admin(chat, user):
 vasu = "this bot is made by vasu"
 
 
-@bot.on(events.NewMessage(pattern="^/start$"))
-async def start(event):
-  await event.reply("__**👋🏻 Hello!**, How's Uh?😉__",
-                    buttons=(
-                      [Button.url('MAIN BOT', 'https://t.me/vasurobot'),
-                      Button.url('CREATOR', 'https://t.me/VasuXD')]
-                    ),
-                    link_preview=False
-                   )
-
-
 @bot.on(events.NewMessage(pattern="^/cspam (.+)"))
 async def tmeme(e):
     if not "vasu" in vasu:
